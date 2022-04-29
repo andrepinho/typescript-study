@@ -1,0 +1,11 @@
+{
+  "name": "no-bs-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "André Pinho <andresouzapinho@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}

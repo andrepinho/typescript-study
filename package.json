@@ -5,7 +5,11 @@
   "author": "André Pinho <andresouzapinho@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/lodash": "^4.14.182",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

@@ -1,6 +1,8 @@
 // https://leetcode.com/problems/two-sum/
 
 import { test } from "../test-utils";
+import { bruteForce } from "./bruteForce";
+import { withMap } from "./withMap";
 
 // Given an array of integers nums and an integer target
 // return indices of the two numbers such that they add up to target.
@@ -15,8 +17,8 @@ import { test } from "../test-utils";
 // -109 <= nums[i] <= 109
 // -109 <= target <= 109
 
-type InputType = [number[], number];
-type OutputType = [number, number];
+export type InputType = [number[], number];
+export type OutputType = [number, number];
 
 const testCases: [InputType, OutputType][] = [
   [
@@ -37,21 +39,6 @@ const testCases: [InputType, OutputType][] = [
   ],
 ];
 
-function bruteForce([nums, target]: InputType): OutputType {
-  let result: OutputType | null = null;
-  nums.forEach((n1, i1) => {
-    nums.slice(i1 + 1).forEach((n2, i2) => {
-      const realI2 = i1 + 1 + i2;
-
-      const n1n2Sum = n1 + n2;
-
-      if (n1n2Sum == target) {
-        result = [i1, realI2];
-      }
-    });
-  });
-
-  return result || [0, 0];
-}
+test(withMap, testCases);
 
 test(bruteForce, testCases);
